@@ -5,3 +5,8 @@
 * `def setup() {}` and `def cleanup() {}` execute once per feature.
 * Each feature can have its own `given:` and `cleanup:` to perform feature-specific setup and cleanup.
 
+
+### Helpful Links
+
+* https://code.google.com/p/spock/ - Spock's official site.
+* http://spock-framework.readthedocs.org/en/latest/index.html - Spock Framework Reference Documentation by Spock author, Peter Niederwieser.
