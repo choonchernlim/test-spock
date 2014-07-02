@@ -1,7 +1,7 @@
 package com.choonchernlim.testSpock.example0;
 
-public class HelloService {
-    public String say() {
+public class MessageService {
+    public String getMessage() {
         return "hello";
     }
 }
