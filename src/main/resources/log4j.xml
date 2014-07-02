@@ -11,7 +11,7 @@
         </layout>
     </appender>
 
-    <logger name="com.choonchernlim.testRxJava">
+    <logger name="com.choonchernlim.testSpock">
         <level value="debug"/>
     </logger>
 
