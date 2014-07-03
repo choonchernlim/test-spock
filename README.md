@@ -10,6 +10,10 @@
 * Use `expect` if `when, then` don't make sense to write.
 * In `then`, don't need to use the word `assert`.
 
+### Example 2 : Exception handling with `thrown(...)`, `@FailsWith` and `notThrown(...)`
+
+* `thrown(...)` is preferred, `@FailsWith` is not recommended in most usage.
+
 ### Helpful Links
 
 * https://code.google.com/p/spock/ - Spock's official site.
