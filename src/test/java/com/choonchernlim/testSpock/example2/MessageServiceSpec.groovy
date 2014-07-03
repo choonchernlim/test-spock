@@ -40,6 +40,6 @@ class MessageServiceSpec extends Specification {
 
         then:
         notThrown(IllegalArgumentException)
-        msg == 'hello, Mike'
+        msg == 'Hello, Mike'
     }
 }

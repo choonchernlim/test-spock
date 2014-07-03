@@ -5,12 +5,12 @@ import com.google.common.base.Strings;
 
 public class MessageService {
     public String getMessage() {
-        return "hello";
+        return "Hello";
     }
 
     public String getMessage(String name) {
         checkArgument(!Strings.isNullOrEmpty(name), "name cannot be blank");
 
-        return "hello, " + name;
+        return "Hello, " + name;
     }
 }
