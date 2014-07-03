@@ -1,4 +1,4 @@
-package com.choonchernlim.testSpock.example0;
+package com.choonchernlim.testSpock.service;
 
 import static com.google.common.base.Preconditions.checkArgument;
 import com.google.common.base.Strings;

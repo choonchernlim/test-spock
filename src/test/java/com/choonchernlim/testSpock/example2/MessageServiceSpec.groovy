@@ -1,6 +1,6 @@
 package com.choonchernlim.testSpock.example2
 
-import com.choonchernlim.testSpock.example0.MessageService
+import com.choonchernlim.testSpock.service.MessageService
 import spock.lang.FailsWith
 import spock.lang.Specification
 
