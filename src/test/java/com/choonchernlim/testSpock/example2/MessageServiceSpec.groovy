@@ -10,7 +10,7 @@ import spock.lang.Specification
 class MessageServiceSpec extends Specification {
     def messageService = new MessageService()
 
-    def "exception because name is blank"() {
+    def "throw exception using thrown(...) because name is blank"() {
         when:
         messageService.getMessage(null)
 
@@ -18,9 +18,18 @@ class MessageServiceSpec extends Specification {
         thrown(IllegalArgumentException)
     }
 
+    def "throw exception using thrown() to check message because name is blank"() {
+        when:
+        messageService.getMessage(null)
+
+        then:
+        IllegalArgumentException e = thrown()
+        e.message == 'name cannot be blank'
+    }
+
     // Another way to throw exception. However, this approach is NOT recommended. `thrown(...)` is the way preferred approach.
     @FailsWith(IllegalArgumentException)
-    def "using @FailsWith because name is blank"() {
+    def "throw exception using @FailsWith because name is blank"() {
         expect:
         messageService.getMessage(null)
     }
