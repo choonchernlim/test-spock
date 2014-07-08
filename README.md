@@ -14,6 +14,10 @@
 
 * `thrown(...)` is preferred, `@FailsWith` is not recommended in most usage.
 
+### Example 3 : Multiple assertions with `where` using table and left shift operator
+
+* Two different ways to perform assertions with different set of data.
+
 ### Helpful Links
 
 * https://code.google.com/p/spock/ - Spock's official site.

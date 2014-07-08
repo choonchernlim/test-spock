@@ -13,4 +13,8 @@ public class MessageService {
 
         return "Hello, " + name;
     }
+
+    public String getIntro(String name, int age) {
+        return "Hello, my name is " + name + ". I'm " + age + " years old.";
+    }
 }
