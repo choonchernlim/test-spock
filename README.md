@@ -14,9 +14,10 @@
 
 * `thrown(...)` is preferred, `@FailsWith` is not recommended in most usage.
 
-### Example 3 : Multiple assertions with `where` using table and left shift operator
+### Example 3 : Multiple assertions with `where` using table and left shift operator. Using `@Unroll` to separate assertions into isolated test case.
 
 * Two different ways to perform assertions with different set of data.
+* Ability to create custom label for `@Unroll` to make test case label more readable.
 
 ### Helpful Links
 
