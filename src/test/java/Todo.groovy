@@ -1,8 +1,6 @@
 class Todo {
     // * old(...)
-    // where - array vs table
     // @Shared
-    // @Unroll
     // Mock
     // Mock with >>> [] different response each time
     // Mock _

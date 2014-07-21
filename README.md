@@ -19,6 +19,12 @@
 * Two different ways to perform assertions with different set of data.
 * Ability to create custom label for `@Unroll` to make test case label more readable.
 
+### Example 4 : Shared and non-shared instance fields.
+
+* By default, all instance fields are not shared between feature methods.
+* Use `@Shared` if the instance is very expensive to create.
+
+
 ### Helpful Links
 
 * https://code.google.com/p/spock/ - Spock's official site.
