@@ -1,5 +1,4 @@
 class Todo {
-    // * old(...)
 
     // Mock
     // Mock with >>> [] different response each time

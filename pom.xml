@@ -48,6 +48,13 @@
                     <source>${jdk.version}</source>
                     <target>${jdk.version}</target>
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <dependencies>
                     <dependency>
                         <groupId>org.codehaus.groovy</groupId>
@@ -60,6 +67,22 @@
                         <version>2.1.5-03</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+
+            <!--
+            By default, Surefire only includes `Test*.java`, `*Test.java` and `*TestCase.java`.
+            So, a small change needs to be made so that it picks up Spock's `*Spec.groovy`.
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.17</version>
+                <configuration>
+                    <includes>
+                        <include>**/*Test.class</include>
+                        <include>**/*Spec.class</include>
+                    </includes>
+                </configuration>
             </plugin>
         </plugins>
     </build>
