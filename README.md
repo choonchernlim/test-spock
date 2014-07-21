@@ -24,6 +24,9 @@
 * By default, all instance fields are not shared between feature methods.
 * Use `@Shared` if the instance is very expensive to create.
 
+### Example 5 : Using `old(...)` to access the previous object state.
+
+* An easy way to compare "before" and "after" object state.
 
 ### Helpful Links
 
