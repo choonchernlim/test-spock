@@ -9,23 +9,23 @@ import spock.lang.Specification
  */
 class ClientServiceSpec extends Specification {
 
+    def messageService = Mock(MessageService)
+    def clientService = new ClientService(messageService)
+
     def "no mocking"() {
         given:
-        def messageService = new MessageService()
-        def clientService = new ClientService(messageService)
+        def actualMessageService = new MessageService()
+        def actualClientService = new ClientService(actualMessageService)
 
         when:
-        def message = clientService.greet('Mike')
+        def message = actualClientService.greet('Mike')
 
         then:
         "Hello! What's up, Mike?" == message
     }
 
-    def "mocking MessageService"() {
-        given:
-        def messageService = Mock(MessageService)
-        def clientService = new ClientService(messageService)
-
+    @SuppressWarnings("GroovyAssignabilityCheck")
+    def "simple mock"() {
         when:
         def message = clientService.greet('Mike')
 
@@ -34,11 +34,27 @@ class ClientServiceSpec extends Specification {
         "Yo! What's up, Mike?" == message
     }
 
-    def "mocking MessageService to return a different value on every call"() {
-        given:
-        def messageService = Mock(MessageService)
-        def clientService = new ClientService(messageService)
+    @SuppressWarnings("GroovyAssignabilityCheck")
+    def "Using closure for multi-line computations"() {
+        when:
+        def message = clientService.greet('Mike')
 
+        then:
+        1 * messageService.getMessage() >> {
+            def val = ''
+
+            3.times {
+                val += 'Boink ';
+            }
+
+            val.trim()
+        }
+
+        "Boink Boink Boink! What's up, Mike?" == message
+    }
+
+    @SuppressWarnings("GroovyAssignabilityCheck")
+    def "A different value on every call"() {
         when:
         def mikeMessage = clientService.greet('Mike')
         def kurtMessage = clientService.greet('Kurt')
@@ -51,11 +67,8 @@ class ClientServiceSpec extends Specification {
         "Hey! What's up, Cory?" == coryMessage
     }
 
-    def "alternative approach - mocking MessageService to return a different value on every call"() {
-        given:
-        def messageService = Mock(MessageService)
-        def clientService = new ClientService(messageService)
-
+    @SuppressWarnings("GroovyAssignabilityCheck")
+    def "alternative approach - A different value on every call"() {
         when:
         def message = clientService.greet(name)
 

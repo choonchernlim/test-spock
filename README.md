@@ -33,6 +33,11 @@
 * `cglib-nodep` is required when mocking concrete classes.
 * Use `>>>` to return different value each time the mock API is called.
 
+### Example 7 : Leveraging `_` wildcard in mocks. Using `interaction` block in `then` block.
+
+* `_` can be used virtually anywhere (cardinalities, target, method, argument).
+* Use `interaction` block the some code depends on other code in `then` block.
+
 ### Helpful Links
 
 * https://code.google.com/p/spock/ - Spock's official site.
