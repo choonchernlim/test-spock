@@ -28,6 +28,11 @@
 
 * An easy way to compare "before" and "after" object state.
 
+### Example 6 : Creating mock object using `Mock()`.
+
+* `cglib-nodep` is required when mocking concrete classes.
+* Use `>>>` to return different value each time the mock API is called.
+
 ### Helpful Links
 
 * https://code.google.com/p/spock/ - Spock's official site.

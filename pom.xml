@@ -29,6 +29,13 @@
             <artifactId>guava</artifactId>
             <version>17.0</version>
         </dependency>
+
+        <!--Required for Spock to mock concrete classes.-->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+            <version>3.1</version>
+        </dependency>
         <dependency>
             <groupId>org.spockframework</groupId>
             <artifactId>spock-core</artifactId>

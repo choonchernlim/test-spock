@@ -1,7 +1,5 @@
 class Todo {
 
-    // Mock
-    // Mock with >>> [] different response each time
     // Mock _
     // pojo.method(!null)
     // dir.listFiles(_ as FileFilter)
