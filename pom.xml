@@ -15,11 +15,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy-all</artifactId>
-            <version>2.1.0</version>
-        </dependency>
-        <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
@@ -28,6 +23,13 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>17.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>2.1.0</version>
         </dependency>
 
         <!--Required for Spock to mock concrete classes.-->
@@ -57,18 +59,18 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
+
+                <!--
+                This property is needed because we don't have src/test/java in this project.
+
+                http://groovy.codehaus.org/Groovy-Eclipse+compiler+plugin+for+Maven
+                -->
+                <extensions>true</extensions>
                 <configuration>
                     <compilerId>groovy-eclipse-compiler</compilerId>
                     <source>${jdk.version}</source>
                     <target>${jdk.version}</target>
                 </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>testCompile</goal>
-                        </goals>
-                    </execution>
-                </executions>
                 <dependencies>
                     <dependency>
                         <groupId>org.codehaus.groovy</groupId>
