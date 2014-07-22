@@ -1,5 +1,9 @@
 # Playing with Spock Test Framework
 
+### Instruction
+
+* Navigate to `/src/test/groovy` to see all the example packages.
+
 ### Example 0 : Understanding different phases of Spock
 * `def setupSpec() {}` and `def cleanupSpec() {}` execute once per specification.
 * `def setup() {}` and `def cleanup() {}` execute once per feature.
