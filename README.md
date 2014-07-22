@@ -1,6 +1,6 @@
 # Playing with Spock Test Framework
 
-### Instruction
+### Instructions
 
 * Navigate to `/src/test/groovy` to see all the example packages.
 
