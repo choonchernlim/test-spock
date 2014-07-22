@@ -1,5 +1,6 @@
 package com.choonchernlim.testSpock.example3
 
+import com.choonchernlim.testSpock.bean.PersonBean
 import com.choonchernlim.testSpock.service.MessageService
 import spock.lang.Specification
 import spock.lang.Unroll
@@ -54,4 +55,26 @@ class MessageServiceSpec extends Specification {
         'Jason' | 30  | "Hello, my name is Jason. I'm 30 years old."
     }
 
+    @Unroll
+    def "Name is #name aged #age years old"() {
+        expect:
+        result == messageService.getIntro(name, age)
+
+        where:
+        name    | age | result
+        'Mike'  | 10  | "Hello, my name is Mike. I'm 10 years old."
+        'Kurt'  | 20  | "Hello, my name is Kurt. I'm 20 years old."
+        'Jason' | 30  | "Hello, my name is Jason. I'm 30 years old."
+    }
+
+    @Unroll
+    def "Name is #person.name aged #person.age years old"() {
+        expect:
+        person.toString() == expectedToString
+
+        where:
+        person                                | expectedToString
+        new PersonBean(name: 'Mike', age: 10) | 'I am Mike and I am 10 years old.'
+        new PersonBean(name: 'Kurt', age: 20) | 'I am Kurt and I am 20 years old.'
+    }
 }
