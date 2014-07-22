@@ -38,6 +38,10 @@
 * `_` can be used virtually anywhere (cardinalities, target, method, argument).
 * Use `interaction` block the some code depends on other code in `then` block.
 
+### Example 8 : Annotating with `@Timeout`, `@Ignore`, `@IgnoreRest`, `@IgnoreIf`, `@Requires`.
+
+* Shorter expressions with `sys`, `env`, `os` and `jvm` when using `@IgnoreIf` or `@Requires`.
+ 
 ### Helpful Links
 
 * https://code.google.com/p/spock/ - Spock's official site.
