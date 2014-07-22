@@ -46,6 +46,11 @@
 
 * Shorter expressions with `sys`, `env`, `os` and `jvm` when using `@IgnoreIf` or `@Requires`.
  
+### Example 9 : Leveraging Hamcrest matchers.
+
+* Using Hamcrest matchers with cleaner syntax.
+* `that` and `expect` do the same thing, but may improve readability depending on `when-then` or `expect` construct.
+ 
 ### Helpful Links
 
 * https://code.google.com/p/spock/ - Spock's official site.
